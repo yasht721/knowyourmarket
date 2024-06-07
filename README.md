@@ -29,3 +29,17 @@ Expected Deliverables:
 - Valid conclusions drawn from the analysis, shedding light on the disparities between index performance and individual stock performance.
 - Power BI Dashboard providing comprehensive visualization of market distribution for enhanced insights.
 
+ **Conclusion:**
+
+Through our analysis of the Nifty 100 index, we have uncovered several significant insights into the composition and dynamics of market capitalization across different segments.
+
+- **Large Cap Outliers**: We observed that the large-cap segment has 8% outliers, representing a substantial proportion of the total market capitalization within the Nifty 100 index, accounting for approximately 30%. This suggests a notable concentration of market value within a select few large-cap companies.
+
+- **Mid Cap and Small Cap Stability**: Interestingly, we found no outliers within the mid-cap and small-cap segments, indicating a relatively stable distribution of market capitalization within these categories.
+
+- **Sector Distribution**: Our analysis revealed sector-wise distributions across different market segments. In the mid-cap and small-cap segments, the pharmaceutical sector emerges as the dominant player, with 10 and 61 stocks, respectively. Conversely, in the large-cap segment, the information technology (IT) and public banking sectors share the top position, each boasting 6 companies, closely followed by the private banking sector with 5 companies.
+
+These findings offer valuable insights into the market dynamics and sectoral compositions within the Nifty 100 index. For a more comprehensive and interactive exploration of our analysis, we invite further exploration of our Power BI dashboard, which provides deep insights and visualizations into the underlying trends and patterns driving market capitalization across various segments.
+
+This project serves as a valuable resource for investors seeking to understand and navigate the complexities of the financial markets, enabling informed decision-making and strategic investment strategies.
+
