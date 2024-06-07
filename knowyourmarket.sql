@@ -78,7 +78,7 @@ from
 order by rnk asc, total_cap desc
 
 
--- Market_Cap distributed by sectors
+-- Sector count by Market_Cap
 
 select
 	cap_type,
@@ -117,6 +117,7 @@ order by 2 desc
 
 WITH PercentileCalc AS (
     SELECT
+		
         PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY market_cap) AS percentile_25,
         PERCENTILE_CONT(0.50) WITHIN GROUP (ORDER BY market_cap) AS percentile_50,
         PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY market_cap) AS percentile_75,
@@ -125,7 +126,8 @@ WITH PercentileCalc AS (
         public.cleaned_market
     WHERE
         cap_type = 'Large Cap'
-)
+) 
+
 SELECT
     cm.name,
     cm.market_cap,
@@ -136,10 +138,37 @@ FROM
 WHERE
     cm.cap_type = 'Large Cap' and
 	market_cap > pc.percentile_75 + (1.5 * pc.IQR)
-
+	
 	-- 8% of the data is an outliner
 
+with outliner_cap as (	
+select
+	sum(market_cap) as out_cap
+from
+	 public.cleaned_market
+where 
+	cap_type = 'Large Cap' and sr_no <= 8 
+),
 
+sub_table as (
+
+select
+	sum(market_cap) as total_cap
+from
+	public.cleaned_market
+where
+	cap_type = 'Large Cap'
+)
+
+select
+	round((out_cap / total_cap)::decimal,2) * 100
+from
+	outliner_cap,
+	sub_table
+	
+-- This cover 30% of the Market Cap in Nifty 100
+	
+	
 -- Finding outliner in Mid Cap (Nifty Mid Cap 150)
 
 
