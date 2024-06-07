@@ -43,3 +43,4 @@ These findings offer valuable insights into the market dynamics and sectoral com
 
 This project serves as a valuable resource for investors seeking to understand and navigate the complexities of the financial markets, enabling informed decision-making and strategic investment strategies.
 
+Link - https://github.com/yasht721/knowyourmarket/blob/main/Knowyourmarket.pbix
