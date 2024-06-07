@@ -100,6 +100,16 @@ group by 1
 order by 2 desc
 
 
+-- Market Cap by Sector allocation
+
+select 
+	sub_sector,
+	sum(market_cap)
+from 
+	public.cleaned_market
+group by 1
+order by 2 desc
+
 -- -- Understanding the distribution of marketcap (Nifty 100)
 
 
